@@ -16,7 +16,7 @@ homeassistant:
 # Show links to resources in log and frontend
 #introduction:
 
-# Enables the frontend
+# Enables the frontend 
 frontend:
 
 panel_iframe:

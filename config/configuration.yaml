@@ -14,7 +14,7 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 # Show links to resources in log and frontend
-introduction:
+#introduction:
 
 # Enables the frontend
 frontend:
@@ -23,12 +23,12 @@ panel_iframe:
   configurator:
     title: Configurator
     icon: mdi:wrench
-    url: http://172.16.87.22:3218
-  
+    url: !secret configurator_server
+
   ssh_server:
     title: SSH Server
     icon: mdi:wrench
-    url: http://172.16.87.22:7681
+    url: !secret ssh_server
 
 # Enables configuration UI
 config:
@@ -63,7 +63,7 @@ mqtt:
   port: 16312
   username: !secret MQTT_username
   password: !secret MQTT_password
-  
+
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -88,6 +88,7 @@ tts:
 # Cloud
 cloud:
 
+switch: !include_dir_merge_list switch
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

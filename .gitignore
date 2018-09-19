@@ -28,3 +28,4 @@ pyozw.sqlite
 nest.conf
 ipchange.yaml
 production_auth.json
+travis_secrets.yaml.backup

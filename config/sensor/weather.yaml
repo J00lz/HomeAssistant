@@ -1,7 +1,7 @@
 - platform: darksky
   api_key: !secret forecast_key
   monitored_conditions:
-#    - summary
+    - summary
 #    - precip_type
     - precip_intensity
     - precip_intensity_max
